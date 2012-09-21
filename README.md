@@ -1,3 +1,4 @@
+To use the library, you're going to need your own DarkSky key. Get it at https://developer.darkskyapp.com/
 
 
 Credits

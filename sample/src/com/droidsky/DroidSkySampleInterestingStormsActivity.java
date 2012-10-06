@@ -2,19 +2,19 @@ package com.droidsky;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import com.droidsky.fetcher.InterestingStormsFetcher;
 import com.droidsky.model.InterestingStorms;
 import com.droidsky.model.Storm;
 
-public class DroidSkySampleActivity extends Activity {
+public class DroidSkySampleInterestingStormsActivity extends Activity {
 
     private ListView stormList;
     private InterestingStormsFetcher interestingStormsFetcher;
@@ -41,7 +41,7 @@ public class DroidSkySampleActivity extends Activity {
             @Override
             protected void onPostExecute(InterestingStorms interestingStorms) {
                 storms = interestingStorms.getStorms();
-                stormList.setAdapter(new StormAdapter(DroidSkySampleActivity.this, 0, storms));
+                stormList.setAdapter(new StormAdapter(DroidSkySampleInterestingStormsActivity.this, 0, storms));
             }
         }.execute();
     }
@@ -54,11 +54,22 @@ public class DroidSkySampleActivity extends Activity {
         }
 
         @Override
-        public View getView(int i, View view, ViewGroup viewGroup) {
+        public View getView(final int i, View view, ViewGroup viewGroup) {
             View newView = getLayoutInflater().inflate(R.layout.interesting_storm_item, viewGroup, false);
 
             TextView cityText = (TextView) newView.findViewById(R.id.storm_city);
             cityText.setText(getItem(i).getCity());
+
+            newView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent forecastIntent = new Intent(DroidSkySampleInterestingStormsActivity.this, DroidSkySampleBasicForecastActivity.class);
+                    forecastIntent.putExtra("LATITUDE", getItem(i).getLatitude());
+                    forecastIntent.putExtra("LONGITUDE", getItem(i).getLongitude());
+                    forecastIntent.putExtra("LOCATION", getItem(i).getCity());
+                    getContext().startActivity(forecastIntent);
+                }
+            });
             return newView;
         }
 

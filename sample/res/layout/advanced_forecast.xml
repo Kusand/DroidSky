@@ -12,6 +12,12 @@
             android:layout_marginBottom="15dp"
             />
 
+    <FrameLayout
+            android:id="@+id/datagraph_holder"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+        />
+
     <TextView
             android:id="@+id/current_state"
             android:layout_width="wrap_content"
@@ -31,10 +37,10 @@
             />
 
     <Button
-        android:id="@+id/advanced_forecast_button"
+        android:id="@+id/refresh_forecast_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Advanced Forecast"
+        android:text="Refresh"
         />
 
 </LinearLayout>

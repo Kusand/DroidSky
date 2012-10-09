@@ -14,6 +14,8 @@
         </activity>
 
         <activity android:name=".DroidSkySampleBasicForecastActivity"/>
+
+        <activity android:name=".DroidSkySampleAdvancedForecastActivity"/>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET"/>

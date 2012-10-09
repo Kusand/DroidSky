@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.droidsky.R;
 import com.kusand.droidsky.fetcher.InterestingStormsFetcher;
 import com.kusand.droidsky.model.InterestingStorms;
 import com.kusand.droidsky.model.Storm;

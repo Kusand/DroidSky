@@ -1,4 +1,4 @@
-package com.droidsky.model;
+package com.kusand.droidsky.model;
 
 public class InterestingStorms {
     private Storm[] storms;

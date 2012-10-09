@@ -1,7 +1,5 @@
-package com.droidsky.fetcher;
+package com.kusand.droidsky.fetcher;
 
-import com.droidsky.R;
-import com.droidsky.model.InterestingStorms;
 import org.codehaus.jackson.map.ObjectMapper;
 
 import java.io.IOException;

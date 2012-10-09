@@ -1,4 +1,4 @@
-package com.droidsky;
+package com.kusand.droidsky;
 
 import android.app.Activity;
 import android.os.AsyncTask;
@@ -7,11 +7,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
-import com.droidsky.fetcher.AdvancedForecastFetcher;
-import com.droidsky.fetcher.BasicForecastFetcher;
-import com.droidsky.model.AdvancedForecast;
-import com.droidsky.model.BasicForecast;
-import com.droidsky.model.HourlyPrecipitationForecast;
+import com.kusand.droidsky.fetcher.AdvancedForecastFetcher;
+import com.kusand.droidsky.model.AdvancedForecast;
+import com.kusand.droidsky.model.HourlyPrecipitationForecast;
 import com.jjoe64.graphview.BarGraphView;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.GraphViewSeries;

@@ -1,6 +1,6 @@
-package com.droidsky.fetcher;
+package com.kusand.droidsky.fetcher;
 
-import com.droidsky.model.InterestingStorms;
+import com.kusand.droidsky.model.InterestingStorms;
 
 public class InterestingStormsFetcher extends DarkSkyFetcher<InterestingStorms> {
 

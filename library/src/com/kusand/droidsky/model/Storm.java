@@ -1,4 +1,4 @@
-package com.droidsky.model;
+package com.kusand.droidsky.model;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 

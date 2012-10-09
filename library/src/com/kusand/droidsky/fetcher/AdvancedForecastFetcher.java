@@ -1,7 +1,6 @@
-package com.droidsky.fetcher;
+package com.kusand.droidsky.fetcher;
 
-import com.droidsky.model.AdvancedForecast;
-import com.droidsky.model.BasicForecast;
+import com.kusand.droidsky.model.AdvancedForecast;
 
 public class AdvancedForecastFetcher extends DarkSkyFetcher<AdvancedForecast> {
 

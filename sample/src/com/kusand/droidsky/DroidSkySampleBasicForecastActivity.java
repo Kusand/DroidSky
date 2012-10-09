@@ -1,4 +1,4 @@
-package com.droidsky;
+package com.kusand.droidsky;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,8 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import com.droidsky.fetcher.BasicForecastFetcher;
-import com.droidsky.model.BasicForecast;
+import com.kusand.droidsky.fetcher.BasicForecastFetcher;
+import com.kusand.droidsky.model.BasicForecast;
 
 public class DroidSkySampleBasicForecastActivity extends Activity {
 

@@ -1,4 +1,4 @@
-package com.droidsky;
+package com.kusand.droidsky;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,9 +10,10 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.droidsky.fetcher.InterestingStormsFetcher;
-import com.droidsky.model.InterestingStorms;
-import com.droidsky.model.Storm;
+import com.droidsky.R;
+import com.kusand.droidsky.fetcher.InterestingStormsFetcher;
+import com.kusand.droidsky.model.InterestingStorms;
+import com.kusand.droidsky.model.Storm;
 
 public class DroidSkySampleInterestingStormsActivity extends Activity {
 

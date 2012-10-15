@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
               android:orientation="vertical">
@@ -12,10 +13,14 @@
             android:layout_marginBottom="15dp"
             />
 
-    <FrameLayout
-            android:id="@+id/datagraph_holder"
+    <com.kusand.graphview.LineGraphView
+            android:id="@+id/hourly_probability_graph"
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            app:maxY="1"
+            app:minY="0"
+            app:drawFilled="true"
+            android:background="#FF00FF"
         />
 
     <TextView

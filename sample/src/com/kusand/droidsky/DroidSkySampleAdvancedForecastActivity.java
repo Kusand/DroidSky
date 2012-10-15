@@ -3,16 +3,13 @@ package com.kusand.droidsky;
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.TextView;
 import com.kusand.droidsky.fetcher.AdvancedForecastFetcher;
 import com.kusand.droidsky.model.AdvancedForecast;
 import com.kusand.droidsky.model.HourlyPrecipitationForecast;
-import com.jjoe64.graphview.BarGraphView;
-import com.jjoe64.graphview.GraphView;
-import com.jjoe64.graphview.GraphViewSeries;
+import com.kusand.graphview.GraphView;
+import com.kusand.graphview.GraphViewSeries;
 
 public class DroidSkySampleAdvancedForecastActivity extends Activity {
 
@@ -25,9 +22,8 @@ public class DroidSkySampleAdvancedForecastActivity extends Activity {
     TextView hourSummary;
     TextView daySummaryText;
     Button advancedForecast;
-    FrameLayout graphHolder;
     AdvancedForecastFetcher forecastFetcher;
-    private BarGraphView graphView;
+    private GraphView graphView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -38,8 +34,7 @@ public class DroidSkySampleAdvancedForecastActivity extends Activity {
         daySummaryText = (TextView) findViewById(R.id.day_summary);
         locationInfo = (TextView) findViewById(R.id.location);
         advancedForecast = (Button) findViewById(R.id.advanced_forecast_button);
-        graphHolder = (FrameLayout) findViewById(R.id.datagraph_holder);
-        graphView = new BarGraphView(this, "Rain Data");
+        graphView = (GraphView) findViewById(R.id.hourly_probability_graph);
 
 
         latitude = getIntent().getStringExtra("LATITUDE");
@@ -70,10 +65,6 @@ public class DroidSkySampleAdvancedForecastActivity extends Activity {
                     hourlyForecastSeries.appendData(new GraphView.GraphViewData(forecast.getTime(), forecast.getProbability()), false);
                 }
                 graphView.addSeries(hourlyForecastSeries);
-                graphView.setManualYAxisBounds(1, 0);
-                graphView.setManualYAxis(true);
-                graphHolder.addView(graphView, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-
             }
         }.execute();
     }
